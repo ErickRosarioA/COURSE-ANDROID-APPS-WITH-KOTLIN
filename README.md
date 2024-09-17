@@ -1,15 +1,17 @@
-# Developing Android Apps with Kotlin
+# ANDROID APPS WITH KOTLIN COURSE
 
-Este repositorio contiene ejemplos prácticos y materiales del curso "Developing Android Apps with Kotlin". En este curso, aprenderás a desarrollar aplicaciones Android utilizando el lenguaje de programación Kotlin, así como herramientas y bibliotecas populares.
+Este repositorio contiene las prácticas que estaré realizando a lo largo del curso "Developing Android Apps with Kotlin". En cada módulo, subiré los ejercicios y proyectos para que puedan ser evaluados por el profesor.
 
 ## Requisitos previos
 
-Para aprovechar al máximo este curso, se recomienda tener conocimientos previos en los siguientes temas:
+Para seguir las prácticas que se encuentran en este repositorio, es recomendable tener conocimientos básicos de los siguientes temas:
 
-- **Kotlin**: Se espera fluidez en el lenguaje de programación Kotlin. Si no lo tienes, puedes tomar un curso introductorio como "Kotlin Bootcamp for Programmers".
-- **SQLite**: Crearás una base de datos SQLite, por lo que un conocimiento básico es útil.
-- **Git y GitHub**: El código del curso se encuentra en GitHub. Tener conocimientos de Git facilitará la navegación y descarga del código.
-- **Android Studio**: Necesitarás Android Studio para ejecutar los ejercicios del curso. Visita la [documentación oficial](https://developer.android.com/studio) para más información sobre los requisitos del sistema.
+- **Kotlin**: Fluidez en el lenguaje de programación Kotlin es importante para completar las prácticas. Si es necesario, puedes tomar un curso introductorio como "Kotlin Bootcamp for Programmers".
+- **SQLite**: Algunas prácticas requieren la creación de una base de datos SQLite, por lo que conocimientos básicos de SQLite serán útiles.
+- **Git y GitHub**: Utilizarás Git para subir y gestionar las prácticas en este repositorio. Conocer las funciones básicas de Git y GitHub facilitará el proceso.
+- **Android Studio**: Las prácticas se desarrollarán y ejecutarán en Android Studio. Asegúrate de tenerlo instalado y actualizado. Consulta los [requisitos del sistema](https://developer.android.com/studio) para más información.
+
+Cada módulo incluirá código, comentarios y recursos utilizados durante el desarrollo de las actividades del curso.
 
 ## Contenido del curso
 
