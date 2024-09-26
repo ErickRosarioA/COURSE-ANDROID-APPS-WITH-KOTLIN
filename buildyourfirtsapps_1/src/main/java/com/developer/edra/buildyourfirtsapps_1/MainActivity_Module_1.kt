@@ -15,6 +15,9 @@ import androidx.core.view.WindowInsetsCompat
 import kotlin.random.Random
 
 class MainActivity_Module_1 : AppCompatActivity() {
+
+    lateinit var diceImage: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -35,6 +38,8 @@ class MainActivity_Module_1 : AppCompatActivity() {
             changesTextRoll()
         }
 
+
+        diceImage = findViewById(R.id.dice_image)
     }
 
     //Funcion para cambiar el numero del textview en la vista
@@ -43,8 +48,8 @@ class MainActivity_Module_1 : AppCompatActivity() {
 //        val resultTextTest: TextView = findViewById(R.id.text_test)
         // resultTextTest.text = randomNumber.toString()
 
-        //1.21 ejericiciio
-        val diceImage: ImageView = findViewById(R.id.dice_image)
+        //1.21 ejercicio y actualizado por el 1.23
+      //  val diceImage: ImageView = findViewById(R.id.dice_image)
         val drawableResource = when (randomNumber) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
