@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">BuildYourFirtsApps_1</string>
     <string name="hola_pueblo_dominicano">HOLA PUEBLO DOMINICANO</string>
-    <string name="bot_n_prueba">Botón prueba</string>
+    <string name="btn_test">Botón prueba</string>
     <string name="_1">1</string>
 </resources>
