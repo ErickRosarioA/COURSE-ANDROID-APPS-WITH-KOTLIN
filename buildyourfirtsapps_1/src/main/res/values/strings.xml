@@ -3,4 +3,5 @@
     <string name="hola_pueblo_dominicano">HOLA PUEBLO DOMINICANO</string>
     <string name="btn_test">Botón prueba</string>
     <string name="_1">1</string>
+    <string name="nuevo_texto_para_el_boton">Nuevo Texto para el boton</string>
 </resources>

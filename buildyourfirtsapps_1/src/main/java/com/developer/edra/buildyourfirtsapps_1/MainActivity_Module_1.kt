@@ -31,7 +31,7 @@ class MainActivity_Module_1 : AppCompatActivity() {
 
         val testButton: Button = findViewById(R.id.btn_test)
 
-        testButton.text = "Nuevo Texto para el boton"
+        testButton.text = getString(R.string.nuevo_texto_para_el_boton)
 
         testButton.setOnClickListener {
             // Toast.makeText(this, "CLICK AL BOTON", Toast.LENGTH_SHORT).show()
