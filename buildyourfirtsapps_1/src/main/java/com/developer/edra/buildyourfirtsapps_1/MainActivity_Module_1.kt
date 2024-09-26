@@ -1,13 +1,8 @@
 package com.developer.edra.buildyourfirtsapps_1
 
-import android.content.Context
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.View
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -49,7 +44,7 @@ class MainActivity_Module_1 : AppCompatActivity() {
         // resultTextTest.text = randomNumber.toString()
 
         //1.21 ejercicio y actualizado por el 1.23
-      //  val diceImage: ImageView = findViewById(R.id.dice_image)
+        //  val diceImage: ImageView = findViewById(R.id.dice_image)
         val drawableResource = when (randomNumber) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
