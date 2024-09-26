@@ -5,11 +5,13 @@ import android.os.Bundle
 import android.util.AttributeSet
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.random.Random
 
 class MainActivity_Module_1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,9 +30,17 @@ class MainActivity_Module_1 : AppCompatActivity() {
         testButton.text = "Nuevo Texto para el boton"
 
         testButton.setOnClickListener {
-            Toast.makeText(this, "CLICK AL BOTON", Toast.LENGTH_SHORT).show()
+           // Toast.makeText(this, "CLICK AL BOTON", Toast.LENGTH_SHORT).show()
+            changesTextRoll()
         }
 
+    }
+
+    //Funcion para cambiar el numero del textview en la vista
+    private fun changesTextRoll() {
+        val randomNumber = Random.nextInt(6) + 1
+        val resultTextTest: TextView = findViewById(R.id.text_test)
+        resultTextTest.text = randomNumber.toString()
     }
 
 }
