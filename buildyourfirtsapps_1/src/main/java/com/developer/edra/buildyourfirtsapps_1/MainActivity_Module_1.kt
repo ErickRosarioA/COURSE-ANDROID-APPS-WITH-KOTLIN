@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.AttributeSet
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,13 +21,16 @@ class MainActivity_Module_1 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-    }
 
-    override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
-        return super.onCreateView(name, context, attrs)
 
         val testButton: Button = findViewById(R.id.btn_test)
 
-        testButton.text= "Nuevo Texto para el boton"
+        testButton.text = "Nuevo Texto para el boton"
+
+        testButton.setOnClickListener {
+            Toast.makeText(this, "CLICK AL BOTON", Toast.LENGTH_SHORT).show()
+        }
+
     }
+
 }
