@@ -17,6 +17,8 @@ Cada módulo incluirá código, comentarios y recursos utilizados durante el des
 
 ### Lección 1: Construye tu primera aplicación
 Crea tu primera aplicación Android, "Dice Roller", que cubre componentes básicos como la visualización de textos e imágenes, además de una introducción a las herramientas de Android Studio.
+![image](https://github.com/user-attachments/assets/0b311be9-7a87-4fc1-bf98-13af8a93ec1f)
+
 
 ### Lección 2: Diseños (Layouts)
 Aprende a diseñar la interfaz de usuario de tu aplicación utilizando tipos de vistas populares con un enfoque en **ConstraintLayout**.
