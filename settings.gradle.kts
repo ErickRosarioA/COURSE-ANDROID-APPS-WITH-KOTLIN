@@ -22,4 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "CourseAndroidAppsKotlin"
 include(":app")
 include(":buildyourfirtsapps_1")
-include(":aboutme")
+include(":aboutme_2")
