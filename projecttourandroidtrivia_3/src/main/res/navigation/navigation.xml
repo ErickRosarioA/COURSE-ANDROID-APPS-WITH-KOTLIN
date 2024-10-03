@@ -50,4 +50,10 @@
             app:popUpTo="@+id/titleFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.developer.edra.projecttourandroidtrivia_3.navigation.AboutFragment"
+        android:label="@string/title_about_trivia"
+        tools:layout="@layout/fragment_about" />
+
 </navigation>
