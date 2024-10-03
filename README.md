@@ -23,6 +23,8 @@ Crea tu primera aplicación Android, "Dice Roller", que cubre componentes básic
 
 ### Lección 2: Diseños (Layouts)
 Aprende a diseñar la interfaz de usuario de tu aplicación utilizando tipos de vistas populares con un enfoque en **ConstraintLayout**.
+<img src="https://github.com/user-attachments/assets/ea32c7da-34c5-4f1c-8e04-d6190cc077f7" width="250" />
+
 
 ### Lección 3: Navegación en la aplicación
 Desarrolla una aplicación divertida de trivia usando múltiples fragmentos y navegación condicional con la biblioteca de navegación de Android.
