@@ -18,6 +18,24 @@
         android:name="com.developer.edra.projecttourandroidtrivia_3.navigation.GameFragment"
         android:label="@string/android_trivia"
         tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameWonFragment"
+        android:name="com.developer.edra.projecttourandroidtrivia_3.navigation.GameWonFragment"
+        android:label="@string/android_trivia"
+        tools:layout="@layout/fragment_game_won">
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.developer.edra.projecttourandroidtrivia_3.navigation.GameOverFragment"
+        android:label="@string/android_trivia"
+        tools:layout="@layout/fragment_game_over">
     </fragment>
 
 </navigation>
