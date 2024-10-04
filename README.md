@@ -23,11 +23,16 @@ Crea tu primera aplicación Android, "Dice Roller", que cubre componentes básic
 
 ### Lección 2: Diseños (Layouts)
 Aprende a diseñar la interfaz de usuario de tu aplicación utilizando tipos de vistas populares con un enfoque en **ConstraintLayout**.
+
 <img src="https://github.com/user-attachments/assets/ea32c7da-34c5-4f1c-8e04-d6190cc077f7" width="250" />
 
 
 ### Lección 3: Navegación en la aplicación
 Desarrolla una aplicación divertida de trivia usando múltiples fragmentos y navegación condicional con la biblioteca de navegación de Android.
+
+<img src="https://github.com/user-attachments/assets/dc5776e9-26df-4797-8fdb-258d60c9711a" width="250" />
+<img src="https://github.com/user-attachments/assets/96e3fca3-a50e-4f23-8336-e8d9fecb6816" width="250" />
+<img src="https://github.com/user-attachments/assets/72c8915a-d2a5-448b-a5c7-5c33c975cca2" width="250" />
 
 ### Lección 4: Ciclo de vida de Activity y Fragment
 Comprender los ciclos de vida de las actividades y fragmentos es fundamental. Construye la app "Dessert Pusher" para aprender estos conceptos clave.
