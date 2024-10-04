@@ -37,6 +37,9 @@ Desarrolla una aplicación divertida de trivia usando múltiples fragmentos y na
 ### Lección 4: Ciclo de vida de Activity y Fragment
 Comprender los ciclos de vida de las actividades y fragmentos es fundamental. Construye la app "Dessert Pusher" para aprender estos conceptos clave.
 
+<img src="https://github.com/user-attachments/assets/427f999d-b584-475a-a08a-f5ecea982e41" width="250" />
+
+
 ### Lección 5: Arquitectura de aplicaciones (Capa UI)
 Utiliza los **Architecture Components** para diseñar aplicaciones complejas. Combina ViewModels con LiveData mientras desarrollas el juego "Guess it".
 
