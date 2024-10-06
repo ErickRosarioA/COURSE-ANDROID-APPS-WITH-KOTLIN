@@ -42,6 +42,7 @@ android {
 
 dependencies {
 
+    implementation(libs.androidx.lifecycle.livedata)
     val nav_version = "2.8.2"
 
     // Views/Fragments integration
@@ -57,7 +58,8 @@ dependencies {
 
     implementation ("com.jakewharton.timber:timber:5.0.1")
 
-    implementation (libs.androidx.lifecycle.extensions)
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
