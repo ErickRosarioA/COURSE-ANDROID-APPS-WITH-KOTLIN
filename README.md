@@ -43,6 +43,9 @@ Comprender los ciclos de vida de las actividades y fragmentos es fundamental. Co
 ### Lección 5: Arquitectura de aplicaciones (Capa UI)
 Utiliza los **Architecture Components** para diseñar aplicaciones complejas. Combina ViewModels con LiveData mientras desarrollas el juego "Guess it".
 
+<img src="https://github.com/user-attachments/assets/7b22c28a-9e67-43eb-9125-f741bbf3843e" width="250" />
+<img src="https://github.com/user-attachments/assets/58e70db3-b7dc-4cd7-a61f-6aa6152588ec" width="250" />
+
 ### Lección 6: Arquitectura de aplicaciones (Persistencia)
 Aprende a almacenar datos de manera persistente con **Room**, haciendo que el almacenamiento de datos sea más simple.
 
