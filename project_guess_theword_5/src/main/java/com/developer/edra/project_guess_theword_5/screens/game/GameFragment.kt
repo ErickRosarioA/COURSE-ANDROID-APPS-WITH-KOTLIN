@@ -78,7 +78,7 @@ class GameFragment : Fragment() {
      */
     fun gameFinished() {
         val currentScore = viewModel.score.value ?: 0
-      //  val action = GameFragmentDirections.actionGameToScore(currentScore)
+       // val action = GameFragmentDirections.actionGameToScore(currentScore)
         //findNavController(this).navigate(action)
     }
 
