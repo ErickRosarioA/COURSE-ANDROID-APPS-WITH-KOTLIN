@@ -21,17 +21,16 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.developer.edra.project_sleep_tracker_6.database.SleepDatabaseDao
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-
+import kotlinx.coroutines.withContext
 
 class SleepQualityViewModel(
     private val sleepNightKey: Long = 0L,
     val database: SleepDatabaseDao
 ) : ViewModel() {
 
-
     private val _navigateToSleepTracker = MutableLiveData<Boolean?>()
-
 
     val navigateToSleepTracker: LiveData<Boolean?>
         get() = _navigateToSleepTracker
@@ -42,9 +41,15 @@ class SleepQualityViewModel(
 
     fun onSetSleepQuality(quality: Int) {
         viewModelScope.launch {
-            val tonight = database.get(sleepNightKey) ?: return@launch
+            val tonight = withContext(Dispatchers.IO) {
+                database.get(sleepNightKey)
+            } ?: return@launch
+
             tonight.sleepQuality = quality
-            database.update(tonight)
+
+            withContext(Dispatchers.IO) {
+                database.update(tonight)
+            }
 
             _navigateToSleepTracker.value = true
         }
