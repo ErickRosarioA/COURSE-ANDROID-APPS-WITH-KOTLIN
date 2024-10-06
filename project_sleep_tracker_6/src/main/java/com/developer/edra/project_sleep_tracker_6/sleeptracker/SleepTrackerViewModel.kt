@@ -25,7 +25,5 @@ import com.developer.edra.project_sleep_tracker_6.database.SleepDatabaseDao
  */
 class SleepTrackerViewModel(
     val database: SleepDatabaseDao,
-    application: Application
-) : AndroidViewModel(application) {
+    application: Application) : AndroidViewModel(application) {
 }
-
