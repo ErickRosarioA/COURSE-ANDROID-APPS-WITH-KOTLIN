@@ -29,7 +29,6 @@ import androidx.navigation.fragment.navArgs
 import com.developer.edra.project_guess_theword_5.R
 import com.developer.edra.project_guess_theword_5.databinding.ScoreFragmentBinding
 
-
 class ScoreFragment : Fragment() {
 
     private lateinit var viewModel: ScoreViewModel
@@ -41,7 +40,7 @@ class ScoreFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        // Inflate view and obtain an instance of the binding class.
+
         val binding: ScoreFragmentBinding = DataBindingUtil.inflate(
             inflater,
             R.layout.score_fragment,
@@ -57,12 +56,10 @@ class ScoreFragment : Fragment() {
 
         binding.scoreViewModel = viewModel
 
-        // Add observer for score
-        viewModel.score.observe(viewLifecycleOwner, Observer { newScore ->
-            binding.scoreText.text = newScore.toString()
-        })
 
-        // Navigates back to title when button is pressed
+        binding.setLifecycleOwner(this)
+
+
         viewModel.eventPlayAgain.observe(viewLifecycleOwner, Observer { playAgain ->
             if (playAgain) {
                 findNavController().navigate(ScoreFragmentDirections.actionRestart())

@@ -35,12 +35,10 @@ class GameFragment : Fragment() {
 
     private lateinit var binding: GameFragmentBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
 
-
+        // Inflate view and obtain an instance of the binding class
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.game_fragment,
@@ -48,26 +46,23 @@ class GameFragment : Fragment() {
             false
         )
 
-
+        // Get the viewmodel
         viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
 
+        // Set the viewmodel for databinding - this allows the bound layout access to all of the
+        // data in the VieWModel
         binding.gameViewModel = viewModel
 
-
-        viewModel.word.observe(viewLifecycleOwner, Observer { newWord ->
-            binding.wordText.text = newWord
-        })
-
-        viewModel.score.observe(viewLifecycleOwner, Observer { newScore ->
-            binding.scoreText.text = newScore.toString()
-        })
+        // Specify the current activity as the lifecycle owner of the binding. This is used so that
+        // the binding can observe LiveData updates
+        binding.setLifecycleOwner(this)
 
         viewModel.currentTime.observe(viewLifecycleOwner, Observer { newTime ->
             binding.timerText.text = DateUtils.formatElapsedTime(newTime)
 
         })
 
-
+        // Sets up event listening to navigate the player when the game is finished
         viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer { isFinished ->
             if (isFinished) {
                 val currentScore = viewModel.score.value ?: 0
