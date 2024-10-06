@@ -17,7 +17,7 @@
 package com.developer.edra.project_guess_theword_5.screens.game
 
 import android.os.Bundle
-import android.util.Log
+import android.text.format.DateUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,7 +30,6 @@ import com.developer.edra.project_guess_theword_5.R
 import com.developer.edra.project_guess_theword_5.databinding.GameFragmentBinding
 
 
-
 /**
  * Fragment where the game is played
  */
@@ -40,8 +39,10 @@ class GameFragment : Fragment() {
 
     private lateinit var binding: GameFragmentBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         // Inflate view and obtain an instance of the binding class
         binding = DataBindingUtil.inflate(
@@ -68,6 +69,11 @@ class GameFragment : Fragment() {
 
         viewModel.score.observe(viewLifecycleOwner, Observer { newScore ->
             binding.scoreText.text = newScore.toString()
+        })
+
+        viewModel.currentTime.observe(viewLifecycleOwner, Observer { newTime ->
+            binding.timerText.text = DateUtils.formatElapsedTime(newTime)
+
         })
 
         // Sets up event listening to navigate the player when the game is finished
