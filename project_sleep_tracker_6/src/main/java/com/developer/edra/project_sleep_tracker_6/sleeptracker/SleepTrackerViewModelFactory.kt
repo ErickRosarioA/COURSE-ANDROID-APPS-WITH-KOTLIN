@@ -21,11 +21,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.developer.edra.project_sleep_tracker_6.database.SleepDatabaseDao
 
-/**
- * This is pretty much boiler plate code for a ViewModel Factory.
- *
- * Provides the SleepDatabaseDao and context to the ViewModel.
- */
+
 class SleepTrackerViewModelFactory(
     private val dataSource: SleepDatabaseDao,
     private val application: Application) : ViewModelProvider.Factory {
@@ -37,4 +33,3 @@ class SleepTrackerViewModelFactory(
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
-
