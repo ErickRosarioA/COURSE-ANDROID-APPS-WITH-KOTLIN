@@ -26,6 +26,9 @@
       <SelectionState runConfigName="project_guess_theword_5">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="project_sleep_tracker_6">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>
