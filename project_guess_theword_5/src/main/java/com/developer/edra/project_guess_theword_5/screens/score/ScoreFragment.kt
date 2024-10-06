@@ -27,9 +27,7 @@ import androidx.navigation.fragment.navArgs
 import com.developer.edra.project_guess_theword_5.R
 import com.developer.edra.project_guess_theword_5.databinding.ScoreFragmentBinding
 
-/**
- * Fragment where the final score is shown, after the game is over
- */
+
 class ScoreFragment : Fragment() {
 
     override fun onCreateView(
