@@ -13,9 +13,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-/**
- * ViewModel for SleepTrackerFragment.
- */
 class SleepTrackerViewModel(
     val database: SleepDatabaseDao,
     application: Application
@@ -25,35 +22,50 @@ class SleepTrackerViewModel(
 
     private val nights = database.getAllNights()
 
-    // Convertir las noches a formato de cadena para mostrar
     val nightsString = nights.map { nights ->
         formatNights(nights, application.resources)
     }
 
-    // LiveData para navegar al fragmento de SleepQuality
+    val startButtonVisible = tonight.map {
+        null == it
+    }
+
+    val stopButtonVisible = tonight.map {
+        null != it
+    }
+
+    val clearButtonVisible = nights.map {
+        it.isNotEmpty()
+    }
+
+    private var _showSnackbarEvent = MutableLiveData<Boolean>()
+
+    val showSnackBarEvent: LiveData<Boolean>
+        get() = _showSnackbarEvent
+
     private val _navigateToSleepQuality = MutableLiveData<SleepNight?>()
 
     val navigateToSleepQuality: LiveData<SleepNight?>
         get() = _navigateToSleepQuality
 
-    // Método para limpiar la navegación una vez completada
+    fun doneShowingSnackbar() {
+        _showSnackbarEvent.value = false
+    }
+
     fun doneNavigating() {
         _navigateToSleepQuality.value = null
     }
 
-    // Inicializa la noche actual al iniciar el ViewModel
     init {
         initializeTonight()
     }
 
-    // Inicializa la noche actual con coroutines en el hilo IO
     private fun initializeTonight() {
         viewModelScope.launch {
             tonight.value = getTonightFromDatabase()
         }
     }
 
-    // Obtiene la noche actual de la base de datos en un hilo de fondo
     private suspend fun getTonightFromDatabase(): SleepNight? {
         return withContext(Dispatchers.IO) {
             var night = database.getTonight()
@@ -64,28 +76,24 @@ class SleepTrackerViewModel(
         }
     }
 
-    // Limpia la base de datos
     private suspend fun clear() {
         withContext(Dispatchers.IO) {
             database.clear()
         }
     }
 
-    // Actualiza una noche en la base de datos
     private suspend fun update(night: SleepNight) {
         withContext(Dispatchers.IO) {
             database.update(night)
         }
     }
 
-    // Inserta una nueva noche en la base de datos
     private suspend fun insert(night: SleepNight) {
         withContext(Dispatchers.IO) {
             database.insert(night)
         }
     }
 
-    // Ejecutado cuando el botón START es presionado
     fun onStartTracking() {
         viewModelScope.launch {
             val newNight = SleepNight()
@@ -94,25 +102,20 @@ class SleepTrackerViewModel(
         }
     }
 
-    // Ejecutado cuando el botón STOP es presionado
     fun onStopTracking() {
         viewModelScope.launch {
             val oldNight = tonight.value ?: return@launch
             oldNight.endTimeMilli = System.currentTimeMillis()
             update(oldNight)
-
-            // Navega al fragmento de SleepQuality
             _navigateToSleepQuality.value = oldNight
         }
     }
 
-    // Ejecutado cuando el botón CLEAR es presionado
     fun onClear() {
         viewModelScope.launch {
-            // Limpia la tabla de la base de datos
             clear()
-            // Limpia la noche actual ya que no está más en la base de datos
             tonight.value = null
         }
+        _showSnackbarEvent.value = true
     }
 }
