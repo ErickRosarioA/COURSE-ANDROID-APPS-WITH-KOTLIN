@@ -48,6 +48,10 @@ Utiliza los **Architecture Components** para diseñar aplicaciones complejas. Co
 ### Lección 6: Arquitectura de aplicaciones (Persistencia)
 Aprende a almacenar datos de manera persistente con **Room**, haciendo que el almacenamiento de datos sea más simple.
 
+<img src="https://github.com/user-attachments/assets/06f6fa41-c3ec-4646-9e93-0e43e36648e9" width="250" />
+<img src="https://github.com/user-attachments/assets/daf87a69-8a19-4c80-aa92-52cae2738cd0" width="250" />
+<img src="https://github.com/user-attachments/assets/eb97876c-b9a1-4ef0-99e3-079ee0d84bc2" width="250" />
+
 ### Lección 7: RecyclerView
 Domina el uso de listas en Android con **RecyclerView**, un componente esencial para cualquier diseño de app.
 
