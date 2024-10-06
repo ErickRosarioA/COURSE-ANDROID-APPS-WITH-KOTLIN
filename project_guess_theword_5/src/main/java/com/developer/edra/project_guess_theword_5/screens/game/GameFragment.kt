@@ -29,10 +29,6 @@ import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import com.developer.edra.project_guess_theword_5.R
 import com.developer.edra.project_guess_theword_5.databinding.GameFragmentBinding
 
-
-/**
- * Fragment where the game is played
- */
 class GameFragment : Fragment() {
 
     private lateinit var viewModel: GameViewModel
@@ -44,7 +40,7 @@ class GameFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        // Inflate view and obtain an instance of the binding class
+
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.game_fragment,
@@ -52,17 +48,12 @@ class GameFragment : Fragment() {
             false
         )
 
-        // Get the viewmodel
+
         viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
 
-        binding.correctButton.setOnClickListener {
-            viewModel.onCorrect()
-        }
-        binding.skipButton.setOnClickListener {
-            viewModel.onSkip()
-        }
+        binding.gameViewModel = viewModel
 
-        /** Setting up LiveData observation relationship **/
+
         viewModel.word.observe(viewLifecycleOwner, Observer { newWord ->
             binding.wordText.text = newWord
         })
@@ -76,7 +67,7 @@ class GameFragment : Fragment() {
 
         })
 
-        // Sets up event listening to navigate the player when the game is finished
+
         viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer { isFinished ->
             if (isFinished) {
                 val currentScore = viewModel.score.value ?: 0
