@@ -17,20 +17,22 @@
 package com.developer.edra.project_guess_theword_5.screens.game
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.fragment.findNavController
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import com.developer.edra.project_guess_theword_5.R
 import com.developer.edra.project_guess_theword_5.databinding.GameFragmentBinding
 
-/**
- * Fragment where the game is played
- */
+
+
 class GameFragment : Fragment() {
+
+    private lateinit var viewModel: GameViewModel
 
     // The current word
     private var word = ""
@@ -43,10 +45,8 @@ class GameFragment : Fragment() {
 
     private lateinit var binding: GameFragmentBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
 
         // Inflate view and obtain an instance of the binding class
         binding = DataBindingUtil.inflate(
@@ -55,6 +55,10 @@ class GameFragment : Fragment() {
             container,
             false
         )
+
+        // Get the viewmodel
+        Log.i("GameFragment", "Called ViewModelProvider")
+        viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
 
         resetList()
         nextWord()
@@ -101,8 +105,8 @@ class GameFragment : Fragment() {
      * Called when the game is finished
      */
     private fun gameFinished() {
-//        val action = GameFragmentDirections.actionGameToScore(score)
-//        findNavController(this).navigate(action)
+        //val action = GameFragmentDirections.actionGameToScore(score)
+       // findNavController(this).navigate(action)
     }
 
     /**
