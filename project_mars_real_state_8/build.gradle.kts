@@ -84,7 +84,7 @@ dependencies {
     implementation ("androidx.recyclerview:recyclerview:1.4.0-beta01")
 
     // Retrofit - Deprecated plugins - No more required
-    // implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
+    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
      implementation ("com.squareup.retrofit2:converter-scalars:2.11.0")
 
     // Retrofit with Moshi Converter

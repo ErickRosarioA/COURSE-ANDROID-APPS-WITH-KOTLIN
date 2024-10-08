@@ -1,3 +1,11 @@
 package com.developer.edra.project_mars_real_state_8.network
 
-class MarsProperty
+import com.squareup.moshi.Json
+
+
+data class MarsProperty(
+    val id: String,
+    @Json(name = "img_src") val imgSrcUrl: String,
+    val type: String,
+    val price: Double
+)
