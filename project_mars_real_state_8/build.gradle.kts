@@ -85,7 +85,7 @@ dependencies {
 
     // Retrofit - Deprecated plugins - No more required
     // implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
-    // implementation "com.squareup.retrofit2:converter-scalars:$version_retrofit"
+     implementation ("com.squareup.retrofit2:converter-scalars:2.11.0")
 
     // Retrofit with Moshi Converter
     implementation ("com.squareup.retrofit2:converter-moshi:2.11.0")
