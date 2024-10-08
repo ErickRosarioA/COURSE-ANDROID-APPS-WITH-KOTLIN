@@ -10,10 +10,10 @@
             type="com.developer.edra.project_sleep_tracker_6.database.SleepNight" />
 
         <variable
-            name="clickListener" type="com.developer.edra.project_sleep_tracker_6.sleeptracker.SleepNightListener"/>
+            name="clickListener"
+            type="com.developer.edra.project_sleep_tracker_6.sleeptracker.SleepNightListener" />
     </data>
 
-    <!-- TODO (03) Set ConstrainLayout's onClick property to clickListener. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
