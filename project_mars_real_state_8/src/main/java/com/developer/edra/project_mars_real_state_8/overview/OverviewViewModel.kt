@@ -20,6 +20,7 @@ package com.developer.edra.project_mars_real_state_8.overview
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.developer.edra.project_mars_real_state_8.network.MarsApi
 import com.developer.edra.project_mars_real_state_8.network.MarsProperty
 import kotlinx.coroutines.CoroutineScope
@@ -46,6 +47,10 @@ class OverviewViewModel : ViewModel() {
     val properties: LiveData<List<MarsProperty>>
         get() = _properties
 
+    private val _navigateToSelectedProperty = MutableLiveData<MarsProperty?>()
+    val navigateToSelectedProperty: MutableLiveData<MarsProperty?>
+        get() = _navigateToSelectedProperty
+
 
     init {
         getMarsRealEstateProperties()
@@ -53,7 +58,7 @@ class OverviewViewModel : ViewModel() {
 
 
     private fun getMarsRealEstateProperties() {
-        coroutineScope.launch {
+        viewModelScope.launch {
             _status.value = MarsApiStatus.LOADING
             try {
                 _properties.value = MarsApi.retrofitService.getProperties()
@@ -63,6 +68,16 @@ class OverviewViewModel : ViewModel() {
                 _properties.value = ArrayList()
             }
         }
+    }
+
+
+    fun displayPropertyDetails(marsProperty: MarsProperty) {
+        _navigateToSelectedProperty.value = marsProperty
+    }
+
+
+    fun displayPropertyDetailsComplete() {
+        _navigateToSelectedProperty.value = null
     }
 
     override fun onCleared() {

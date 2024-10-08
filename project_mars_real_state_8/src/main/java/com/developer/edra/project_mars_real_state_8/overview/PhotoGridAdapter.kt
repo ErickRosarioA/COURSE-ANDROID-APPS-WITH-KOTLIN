@@ -9,18 +9,18 @@ import com.developer.edra.project_mars_real_state_8.databinding.GridViewItemBind
 import com.developer.edra.project_mars_real_state_8.network.MarsProperty
 
 
-class PhotoGridAdapter :
+class PhotoGridAdapter(val onClickListener: OnClickListener) :
     ListAdapter<MarsProperty, PhotoGridAdapter.MarsPropertyViewHolder>(DiffCallback) {
-
 
     class MarsPropertyViewHolder(private var binding: GridViewItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(marsProperty: MarsProperty) {
             binding.property = marsProperty
+            // This is important, because it forces the data binding to execute immediately,
+            // which allows the RecyclerView to make the correct view size measurements
             binding.executePendingBindings()
         }
     }
-
 
     companion object DiffCallback : DiffUtil.ItemCallback<MarsProperty>() {
         override fun areItemsTheSame(oldItem: MarsProperty, newItem: MarsProperty): Boolean {
@@ -43,6 +43,13 @@ class PhotoGridAdapter :
 
     override fun onBindViewHolder(holder: MarsPropertyViewHolder, position: Int) {
         val marsProperty = getItem(position)
+        holder.itemView.setOnClickListener {
+            onClickListener.onClick(marsProperty)
+        }
         holder.bind(marsProperty)
+    }
+
+    class OnClickListener(val clickListener: (marsProperty: MarsProperty) -> Unit) {
+        fun onClick(marsProperty: MarsProperty) = clickListener(marsProperty)
     }
 }
