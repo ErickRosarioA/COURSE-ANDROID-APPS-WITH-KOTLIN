@@ -9,10 +9,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.developer.edra.project_mars_real_state_8.R
-import com.developer.edra.project_mars_real_state_8.databinding.GridViewItemBinding
+import com.developer.edra.project_mars_real_state_8.databinding.FragmentOverviewBinding
 
 
 class OverviewFragment : Fragment() {
+
 
     private val viewModel: OverviewViewModel by lazy {
         ViewModelProvider(this).get(OverviewViewModel::class.java)
@@ -23,13 +24,16 @@ class OverviewFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = GridViewItemBinding.inflate(inflater)
+        val binding = FragmentOverviewBinding.inflate(inflater)
 
 
         binding.lifecycleOwner = this
 
 
         binding.viewModel = viewModel
+
+
+        binding.photosGrid.adapter = PhotoGridAdapter()
 
         setHasOptionsMenu(true)
         return binding.root
@@ -40,5 +44,4 @@ class OverviewFragment : Fragment() {
         inflater.inflate(R.menu.overflow_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
-
 }

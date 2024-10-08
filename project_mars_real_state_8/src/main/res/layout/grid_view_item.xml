@@ -10,6 +10,10 @@
         <variable
             name="viewModel"
             type="com.developer.edra.project_mars_real_state_8.overview.OverviewViewModel" />
+
+        <variable
+            name="property"
+            type="com.developer.edra.project_mars_real_state_8.network.MarsProperty" />
     </data>
 
     <ImageView
@@ -19,6 +23,6 @@
         android:adjustViewBounds="true"
         android:padding="2dp"
         android:scaleType="centerCrop"
-        app:imageUrl="@{viewModel.property.imgSrcUrl}"
+        app:imageUrl="@{property.imgSrcUrl}"
         tools:src="@tools:sample/backgrounds/scenic" />
 </layout>
