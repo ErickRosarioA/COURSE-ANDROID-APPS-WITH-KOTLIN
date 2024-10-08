@@ -75,7 +75,7 @@ dependencies {
 
 
     // Retrofit Coroutines Support - Deprecated - No more required
-    // implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter"
+     //implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter"
 
     // Glide
     implementation ("com.github.bumptech.glide:glide:4.16.0")
