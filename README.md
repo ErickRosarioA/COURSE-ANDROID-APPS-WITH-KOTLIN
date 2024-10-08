@@ -61,6 +61,10 @@ Domina el uso de listas en Android con **RecyclerView**, un componente esencial 
 ### Lección 8: Conectar a Internet
 En esta lección, aprenderás a comunicarte con APIs utilizando **Retrofit** y a mostrar imágenes de la web con **Glide**.
 
+<img src="https://github.com/user-attachments/assets/149315f0-84fa-40d7-850a-e003bf5fcee2" width="250" />
+<img src="https://github.com/user-attachments/assets/041c47f5-6af4-4c9c-9229-bdd3f9cfccd7" width="250" />
+<img src="https://github.com/user-attachments/assets/56b3a8af-cc18-43c2-b2f6-557d28629e65" width="250" />
+
 ### Lección 9: Procesos en segundo plano
 Desarrolla tus propios servicios y tareas en segundo plano en Android.
 
