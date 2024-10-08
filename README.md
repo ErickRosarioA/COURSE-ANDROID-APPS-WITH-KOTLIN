@@ -55,6 +55,9 @@ Aprende a almacenar datos de manera persistente con **Room**, haciendo que el al
 ### Lección 7: RecyclerView
 Domina el uso de listas en Android con **RecyclerView**, un componente esencial para cualquier diseño de app.
 
+<img src="https://github.com/user-attachments/assets/727ec871-f1fc-4390-b618-f84de8b80bca" width="250" />
+<img src="https://github.com/user-attachments/assets/ea6c25ab-22f8-4e40-a288-903a1a8191f3" width="250" />
+
 ### Lección 8: Conectar a Internet
 En esta lección, aprenderás a comunicarte con APIs utilizando **Retrofit** y a mostrar imágenes de la web con **Glide**.
 
