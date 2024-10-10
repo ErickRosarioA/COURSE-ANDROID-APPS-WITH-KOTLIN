@@ -68,6 +68,11 @@ En esta lección, aprenderás a comunicarte con APIs utilizando **Retrofit** y a
 ### Lección 9: Procesos en segundo plano
 Desarrolla tus propios servicios y tareas en segundo plano en Android.
 
+
+<img src="https://github.com/user-attachments/assets/4bf40e02-d5e5-4704-84ea-c4adc8e206e2" width="250" />
+<img src="https://github.com/user-attachments/assets/c1df6852-e05a-42bd-81c4-56395ecab496" width="250" />
+
+
 ### Lección 10: Diseñando para todos
 Explora cómo diseñar una app accesible para todos, en cualquier lugar, y aprenderás a implementar mejores prácticas de diseño.
 
