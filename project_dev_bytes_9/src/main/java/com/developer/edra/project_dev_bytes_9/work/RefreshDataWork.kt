@@ -7,7 +7,7 @@ import com.developer.edra.project_dev_bytes_9.database.getDatabase
 import com.developer.edra.project_dev_bytes_9.repository.VideosRepository
 import retrofit2.HttpException
 
-class RefreshDataWorker(appContext: Context, params: WorkerParameters):
+class RefreshDataWorker(appContext: Context, params: WorkerParameters) :
     CoroutineWorker(appContext, params) {
 
     override suspend fun doWork(): Result {
@@ -20,4 +20,9 @@ class RefreshDataWorker(appContext: Context, params: WorkerParameters):
             Result.retry()
         }
     }
+
+    companion object {
+        const val WORK_NAME = "RefreshDataWorker"
+    }
 }
+
