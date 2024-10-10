@@ -78,6 +78,14 @@ Explora cómo diseñar una app accesible para todos, en cualquier lugar, y apren
 <img src="https://github.com/user-attachments/assets/a151f19e-35b2-4aac-baf6-32f11f9bb16e" width="250" />
 <img src="https://github.com/user-attachments/assets/f2b079e3-5c36-4d3d-ba17-e103ea0e076d" width="250" />
 <img src="https://github.com/user-attachments/assets/d6d904b2-a474-4c4c-92f8-e899b4b82d10" width="250" />
+<img src="https://github.com/user-attachments/assets/0a4e5442-359c-4b81-9209-a30785952799" width="250" />
+
+
+### Certificación de finalización del curso:
+Adjunto evidencia del plan propuesto por el curso, con el estado de completado.
+
+![image](https://github.com/user-attachments/assets/825f6a81-7aac-47da-a05a-a85fd444002a)
+
 
 ## Herramientas utilizadas
 
