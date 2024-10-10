@@ -11,8 +11,6 @@ Para seguir las prácticas que se encuentran en este repositorio, es recomendabl
 - **Git y GitHub**: Utilizarás Git para subir y gestionar las prácticas en este repositorio. Conocer las funciones básicas de Git y GitHub facilitará el proceso.
 - **Android Studio**: Las prácticas se desarrollarán y ejecutarán en Android Studio. Asegúrate de tenerlo instalado y actualizado. Consulta los [requisitos del sistema](https://developer.android.com/studio) para más información.
 
-Cada módulo incluirá código, comentarios y recursos utilizados durante el desarrollo de las actividades del curso.
-
 ## Contenido del curso
 
 ### Lección 1: Construye tu primera aplicación
@@ -85,14 +83,14 @@ Explora cómo diseñar una app accesible para todos, en cualquier lugar, y apren
 - **Retrofit**: Cliente HTTP para consumir APIs.
 - **Glide**: Biblioteca para la carga y visualización de imágenes.
 
-## Instrucciones de instalación
+## Instrucciones de instalación y ejecución
 
 1. Clona este repositorio:
    ```bash
    git clone https://github.com/ErickRosarioA/COURSE-ANDROID-APPS-WITH-KOTLIN.git
 2. Abre el proyecto en Android Studio.
 
-3. Sigue las instrucciones de cada lección para completar los ejercicios.
+3. Veirifica cada ejercicio colocado en diferentes módulo en el mismo proyecto.
 
 ## Contacto
 
