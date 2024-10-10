@@ -74,6 +74,11 @@ Desarrolla tus propios servicios y tareas en segundo plano en Android.
 ### Lección 10: Diseñando para todos
 Explora cómo diseñar una app accesible para todos, en cualquier lugar, y aprenderás a implementar mejores prácticas de diseño.
 
+<img src="https://github.com/user-attachments/assets/ff8ed514-9e02-4de9-8156-39a83b9ac289" width="250" />
+<img src="https://github.com/user-attachments/assets/a151f19e-35b2-4aac-baf6-32f11f9bb16e" width="250" />
+<img src="https://github.com/user-attachments/assets/f2b079e3-5c36-4d3d-ba17-e103ea0e076d" width="250" />
+<img src="https://github.com/user-attachments/assets/d6d904b2-a474-4c4c-92f8-e899b4b82d10" width="250" />
+
 ## Herramientas utilizadas
 
 - **Kotlin**: Lenguaje de programación principal.
