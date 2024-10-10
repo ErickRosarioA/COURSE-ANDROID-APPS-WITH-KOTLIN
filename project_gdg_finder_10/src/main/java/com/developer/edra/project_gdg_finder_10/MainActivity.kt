@@ -37,8 +37,6 @@ class MainActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(navController, binding.drawerLayout)
 
-
-
         binding.navigationView.setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination: NavDestination, _ ->

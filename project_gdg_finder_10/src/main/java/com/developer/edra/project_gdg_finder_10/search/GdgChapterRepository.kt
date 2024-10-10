@@ -44,11 +44,10 @@ class GdgChapterRepository(gdgApiService: GdgApiService) {
     private suspend fun doSortData(location: Location? = null): SortedData {
 
         val result = coroutineScope {
-            // launch a new coroutine to do the sort (so other requests can wait for this sort to complete)
             val deferred = async { SortedData.from(request.await(), location) }
-            // cache the Deferred so any future requests can wait for this sort
+
             inProgressSort = deferred
-            // and return the result of this sort
+
             deferred.await()
         }
         return result
@@ -78,20 +77,14 @@ class GdgChapterRepository(gdgApiService: GdgApiService) {
 
             suspend fun from(response: GdgResponse, location: Location?): SortedData {
                 return withContext(Dispatchers.Default) {
-                    // this sorting is too expensive to do on the main thread, so do thread confinement here.
                     val chapters: List<GdgChapter> = response.chapters.sortByDistanceFrom(location)
-                    // use distinctBy which will maintain the input order - this will have the effect of making
-                    // a filter list sorted by the distance from the current location
                     val filters: List<String> = chapters.map { it.region }.distinctBy { it }
-                    // group the chapters by region so that filter queries don't require any work
                     val chaptersByRegion: Map<String, List<GdgChapter>> =
                         chapters.groupBy { it.region }
-                    // return the sorted result
                     SortedData(chapters, filters, chaptersByRegion)
                 }
 
             }
-
 
 
             private fun List<GdgChapter>.sortByDistanceFrom(currentLocation: Location?): List<GdgChapter> {

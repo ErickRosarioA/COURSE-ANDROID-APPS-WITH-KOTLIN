@@ -54,7 +54,6 @@ class GdgListFragment : Fragment() {
 
         viewModel.showNeedLocation.observe(viewLifecycleOwner, object : Observer<Boolean> {
             override fun onChanged(value: Boolean) {
-                // Snackbar is like Toast but it lets us show forever
                 if (value == true) {
                     Snackbar.make(
                         binding.root,

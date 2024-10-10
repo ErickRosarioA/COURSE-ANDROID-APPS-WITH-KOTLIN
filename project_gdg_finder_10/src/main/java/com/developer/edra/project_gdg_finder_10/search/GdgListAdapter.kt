@@ -26,8 +26,6 @@ class GdgListAdapter(val clickListener: GdgClickListener) :
         fun bind(listener: GdgClickListener, gdgChapter: GdgChapter) {
             binding.chapter = gdgChapter
             binding.clickListener = listener
-            // This is important, because it forces the data binding to execute immediately,
-            // which allows the RecyclerView to make the correct view size measurements
             binding.executePendingBindings()
         }
 
